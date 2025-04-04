@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+export NODE_OPTIONS="--max-old-space-size=4096"
+jupyter lab build
+
 # Install coursier
 curl -fLo cs https://github.com/coursier/coursier/releases/download/v2.0.3/cs-x86_64-pc-linux
 chmod +x cs
